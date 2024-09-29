@@ -3,12 +3,17 @@
 @tailwind utilities;
 
 header li ul{
-  @apply px-3
+  @apply px-5
 }
 
  .bg-head{
   background-color: rgb(34, 34, 34);
 }
+
+.bg-home{
+  background-color: rgb(35, 35, 35);
+}
+/* .circular--square { border-radius: 50%; } */
 
 /* @font-face {
   font-family: 'Kingthings_Printingkit';

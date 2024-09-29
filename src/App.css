@@ -7,11 +7,18 @@ header li ul{
 }
 
  .bg-head{
-  background-color: rgb(34, 34, 34);
+  background-color: rgb(37, 37, 37);
 }
 
 .bg-home{
   background-color: rgb(35, 35, 35);
+}
+.bg-About-Head{
+  background-color: rgb(37, 37, 37);
+}
+
+.prograss{
+  width: 45%;
 }
 /* .circular--square { border-radius: 50%; } */
 

@@ -6,7 +6,7 @@ export default function Header(){
 
 
     return <header className=" flex justify-between px-5 py-4 bg-head text-white">
-        <a className=" font-mono" href="#">Naresh::K</a>
+        <a className=" font-mono font-semibold text-xl" href="#">Naresh::K &#62; </a>
         <nav className='hidden md:block'>
             <li className="flex text-white">
                 <ul href="#">About me</ul>

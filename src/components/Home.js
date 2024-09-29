@@ -2,7 +2,7 @@ import hero from '../assets/profile.jpg'
 
 export default function Home()
 {
-    return <section className='flex px-20 py-44 bg-home justify-center '>
+    return <section className='flex flex-col md:flex-row px-20 py-44 bg-home justify-center '>
        <h1 class="mb-4 text-5xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-5xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Computer Engineer</span><br/>Naresh K,
             <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 py-10" >Started programming at the age of 17, I <br/>got a keen interest 
                 towards Cyber Security<br/> and have explored multiple dimensions <br/> of it.

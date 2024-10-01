@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import hero from '../assets/profile.jpg';
 
-
 const Projects = () => {
     const content = [
         { title: "Project 1", description: "Noteworthy technology acquisitions 2021", image: hero },
@@ -13,26 +12,45 @@ const Projects = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [projectsPerSlide, setProjectsPerSlide] = useState(2); // Default is 2 for desktop
 
     // Autoplay Logic (change slides every 3 seconds)
     useEffect(() => {
         const interval = setInterval(() => {
             handleNextSlide();
-        }, 3000); // 3 seconds interval
+        }, 4000); // 3 seconds interval
 
         return () => clearInterval(interval); // Cleanup interval on unmount
+    }, [currentIndex, projectsPerSlide]);
+
+    // Detect screen size and update projects per slide
+    useEffect(() => {
+        const updateProjectsPerSlide = () => {
+            if (window.innerWidth < 768) {
+                setProjectsPerSlide(1); // Show 1 project per slide on mobile
+            } else {
+                setProjectsPerSlide(2); // Show 2 projects per slide on desktop
+            }
+        };
+
+        updateProjectsPerSlide(); // Initial check
+
+        window.addEventListener('resize', updateProjectsPerSlide); // Listen for screen resize events
+        return () => window.removeEventListener('resize', updateProjectsPerSlide); // Cleanup on unmount
     }, []);
 
-    // Move to the next two projects
+    // Move to the next slide
     const handleNextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 2) % content.length); // Loop back when reaching the end
+        setCurrentIndex((prevIndex) => (prevIndex + projectsPerSlide) % content.length); // Loop back when reaching the end
     };
 
-    // Get the next two projects based on currentIndex
+    // Get the displayed projects based on currentIndex and projectsPerSlide
     const getDisplayedProjects = () => {
-        const firstProjectIndex = currentIndex % content.length;
-        const secondProjectIndex = (currentIndex + 1) % content.length;
-        return [content[firstProjectIndex], content[secondProjectIndex]];
+        const displayed = [];
+        for (let i = 0; i < projectsPerSlide; i++) {
+            displayed.push(content[(currentIndex + i) % content.length]);
+        }
+        return displayed;
     };
 
     const displayedProjects = getDisplayedProjects();

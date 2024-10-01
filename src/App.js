@@ -1,4 +1,5 @@
 import './App.css';
+import ContactUs from './components/ContactUs.js';
 import Experience from './components/Experience.js';
 import Footer from './components/Footer.js';
 import Header from './components/Header.js';
@@ -9,7 +10,7 @@ import Skills from './components/Skills.js';
 function nav(name){
   return <section className="bg-About-Head">
   <div>
-    <h1 className="text-xl text-white font-mono font-semibold px-5 py-10">{name}</h1>
+    <h1 className="text-xl text-white font-mono font-semibold px-5 py-8">{name}</h1>
   </div>
 </section>
 }
@@ -25,6 +26,7 @@ function App() {
       {nav("Projects-!")}
       <Projects/>
       {nav("Contact Me @")}
+      <ContactUs/>
       <Footer/>
     </div>
   );

@@ -1,8 +1,9 @@
-export default function Skills(){
+export default function Skills() {
   return (
     <section className="bg-home py-20">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
+          {/* Programming Skills */}
           <div>
             <h1 className="text-white font-mono pb-10 text-2xl font-bold">Programming Skills</h1>
             {renderSkill("C", 75)}
@@ -12,24 +13,26 @@ export default function Skills(){
             {renderSkill("C++", 40)}
           </div>
 
+          {/* Database Skills */}
           <div>
-            <h1 className="text-white font-mono pb-10 text-2xl font-bold">DataBase Skills</h1>
-            {renderSkill("Sql", 60)}
+            <h1 className="text-white font-mono pb-10 text-2xl font-bold">Database Skills</h1>
+            {renderSkill("SQL", 60)}
             {renderSkill("MongoDB", 50)}
-            {renderSkill("ANSI Sql", 50)}
-            {renderSkill("PostgreSql", 45)}
-            
+            {renderSkill("ANSI SQL", 50)}
+            {renderSkill("PostgreSQL", 45)}
           </div>
 
+          {/* Tools & OS Skills */}
           <div>
-            <h1 className="text-white font-mono pb-10 text-2xl font-bold">Tools && OS</h1>
+            <h1 className="text-white font-mono pb-10 text-2xl font-bold">Tools & OS</h1>
             {renderSkill("Linux", 80)}
             {renderSkill("Git", 85)}
-            {renderSkill("PostMan", 60)}
+            {renderSkill("Postman", 60)}
             {renderSkill("Arduino", 70)}
-            {renderSkill("vs code", 80)}
+            {renderSkill("VS Code", 80)}
           </div>
 
+          {/* IOT Skills */}
           <div>
             <h1 className="text-white font-mono pb-10 text-2xl font-bold">IOT Skills</h1>
             {renderSkill("Arduino", 60)}
@@ -39,15 +42,13 @@ export default function Skills(){
         </div>
       </div>
     </section>
-
-    
   );
 }
 
 function renderSkill(skill, percentage, color = "blue") {
   return (
     <div className="mb-4">
-      <div className="flex justify-between mb-1">
+      <div className="flex justify-between mb-2">
         <span className="text-base font-medium text-white">{skill}</span>
         <span className="text-sm font-medium text-white">{percentage}%</span>
       </div>

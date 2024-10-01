@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 header li ul{
   @apply px-5
 }
@@ -22,29 +24,25 @@ header li ul{
 }
 
 .slider-container {
-  overflow: hidden; /* Hide overflowing content */
-  position: relative; /* For absolute positioning of slides */
+  width: 100%;
+  overflow: hidden; /* Hide any overflowing slides */
+  display: flex;
+  justify-content: center;
 }
 
-.slider {
-  display: flex; /* Align slides in a row */
-  transition: transform 0.5s ease; /* Smooth transition */
+.project-card {
+  flex: 0 0 45%; /* Ensure two projects are displayed side by side */
+  margin: 0 10px;
 }
 
-.slide {
-  min-width: 50%; /* Each slide takes half the width */
-  box-sizing: border-box; /* Include padding in width */
-  display: flex; /* Allow flex for inner content */
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center align content */
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-.slide-image {
-  width: 100%; /* Make images responsive */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Cover the area while preserving aspect ratio */
-  border-radius: 12px; /* Rounded corners */
-}
+
 
 /* Optional: You can adjust padding/margins for the slide content */
 .p-5 {

@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import hero from '../assets/profile.jpg';
 
 
@@ -13,41 +13,52 @@ const Projects = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const sliderRef = useRef(null); // Create a ref for the slider
 
-    // Autoplay Logic
+    // Autoplay Logic (change slides every 3 seconds)
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % content.length); // Loop back to first item
-        }, 3000); // Change slides every 3 seconds
+            handleNextSlide();
+        }, 3000); // 3 seconds interval
 
-        return () => clearInterval(interval); // Cleanup on unmount
-    }, [content.length]);
+        return () => clearInterval(interval); // Cleanup interval on unmount
+    }, []);
 
-    // Update the slider position based on currentIndex
-    useEffect(() => {
-        if (sliderRef.current) {
-            sliderRef.current.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-    }, [currentIndex]);
+    // Move to the next two projects
+    const handleNextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 2) % content.length); // Loop back when reaching the end
+    };
+
+    // Get the next two projects based on currentIndex
+    const getDisplayedProjects = () => {
+        const firstProjectIndex = currentIndex % content.length;
+        const secondProjectIndex = (currentIndex + 1) % content.length;
+        return [content[firstProjectIndex], content[secondProjectIndex]];
+    };
+
+    const displayedProjects = getDisplayedProjects();
 
     return (
         <section className="py-10 bg-home">
             <h2 className="text-white text-3xl text-center font-bold mb-8">Our Projects</h2>
-            <div className='slider-container'>
-                <div className='slider' ref={sliderRef}>
-                    {content.map((project, index) => (
-                        <div className='slide' key={index}>
+            <div className="slider-container">
+                <div className="flex justify-center gap-8">
+                    {displayedProjects.map((project, index) => (
+                        <div className="project-card" key={index}>
                             <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                                 <a href="#">
-                                    <img className="slide-image" src={project.image} alt={`Project ${index + 1}`} />
+                                    <img className="project-image" src={project.image} alt={project.title} />
                                 </a>
                                 <div className="p-5">
                                     <a href="#">
-                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{project.title}</h5>
+                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            {project.title}
+                                        </h5>
                                     </a>
                                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{project.description}</p>
-                                    <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">
+                                    <a
+                                        href="#"
+                                        className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800"
+                                    >
                                         Read more
                                     </a>
                                 </div>

@@ -1,12 +1,9 @@
 import './App.css';
-import About from './components/About.js';
 import Experience from './components/Experience.js';
 import Footer from './components/Footer.js';
 import Header from './components/Header.js';
 import Home from './components/Home.js';
 import Projects from './components/Projects.js';
-import ProjectsBar from './components/ProjectsBar.js';
-import SkillBar from './components/SkillBar.js'
 import Skills from './components/Skills.js';
 
 function nav(name){
@@ -27,6 +24,7 @@ function App() {
       <Skills/>
       {nav("Projects-!")}
       <Projects/>
+      {nav("Contact Me @")}
       <Footer/>
     </div>
   );

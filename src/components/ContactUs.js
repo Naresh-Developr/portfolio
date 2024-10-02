@@ -21,6 +21,9 @@ const ContactUs = () => {
     setFormData({ name: '', email: '', message: '' });
   };
 
+
+  
+
   return (
     <section id="contact" className="bg-home py-10 ">
       <div className="w-full max-w-lg text-white sm:max-w-xs mx-auto bg-head p-8 shadow-lg rounded-lg sm:px-4 md:px-8">

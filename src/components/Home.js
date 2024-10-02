@@ -3,25 +3,26 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 export default function Home() {
     const [text] = useTypewriter({
-        words: ['Computer Engineer', 'Cyber Security', 'Software Developer', 'Tech Lover', 'Problem Solver'],
+        words: ['Computer Engineer', 'Cyber Student', 'Software Developer', 'Tech Enthusiast'],
         loop: {},
         typeSpeed: 100,
         delaySpeed: 40
     })
 
     return (
-        <section className='flex flex-col md:flex-row px-20 lg:py-44 py-20 bg-home justify-center'>
-            <div className='flex-col py-32 md:block w-1/2'>
+        <section  id="home"  className='flex flex-col md:flex-row px-20 lg:py-44 py-20 bg-home justify-center'>
+            <div className='flex-col sm:py-32 md:block w-1/2'>
                 <h1 className="mb-4 text-5xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-5xl">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 transition duration-500 ease-in-out">{text}</span>
                     <br /> Naresh K,
                 </h1>
                 <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 py-10">
-                    At 17, my interest in cybersecurity sparked a<br /> journey of discovery.
+                    At 17, my interest towards cybersecurity sparked a<br /> journey of discovery.
                     Today, I am on the path to<br /> becoming an elite programmer determined to<br /> <b className='font-bold text-red-500'>Do What I Want !</b>
                 </p>
 
                 <div className='flex'>
+                    <a href='#'>
                     <svg
                         id="Layer_1"
                         data-name="Layer 1"
@@ -42,6 +43,7 @@ export default function Home() {
                         />
 
                     </svg>
+                    </a>
 
                     <div className='px-5'>
                         <a href='https://www.linkedin.com/in/naresh0k/'>
@@ -77,7 +79,7 @@ export default function Home() {
                 </button>
                 </a>
             </div>
-            <div className='py-32'>
+            <div className='sm:py-32'>
                 <img className="rounded-full w-97 h-96 mt-10 " src={hero} alt="image description" />
             </div>
         </section>

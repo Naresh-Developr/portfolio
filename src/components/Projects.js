@@ -56,7 +56,7 @@ const Projects = () => {
     const displayedProjects = getDisplayedProjects();
 
     return (
-        <section className="py-10 bg-home">
+        <section id = "projects"className="py-10 bg-home">
             <h2 className="text-white text-3xl text-center font-bold mb-8">Our Projects</h2>
             <div className="slider-container">
                 <div className="flex justify-center gap-8">

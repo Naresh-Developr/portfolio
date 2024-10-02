@@ -66,6 +66,11 @@ header li ul{
   @apply fixed top-14 bg-black h-full w-full,
   
 } */
+
+html {
+  scroll-behavior: smooth;
+}
+
 .mob-nav{
   background-color: #222222;
   @apply fixed top-14 h-full w-full

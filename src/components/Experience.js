@@ -1,8 +1,9 @@
 
 
 export default function Experience() {
-  return <section className="flex flex-col md:flex-row bg-home justify-center py-16 ">
-    <div className="py-32">
+  return <section id = 'about' className="flex flex-col md:flex-row bg-home justify-center py-16 ">
+  
+    <div className="sm:py-32 text-lg font-normal">
       <div class="bg-home px-10">
         <h1 className="text-white font-mono font-semibold"> Education</h1>
         <div class="max-w-xl mx-auto p-8">
@@ -26,7 +27,7 @@ export default function Experience() {
                     <div class="min-w-0 flex-1 py-0">
                       <div class="text-md text-gray-500">
                         <div>
-                          <a href="#"
+                          <a
                             class="my-0.5 relative inline-flex items-center bg-white rounded-full border border-gray-300 px-3 py-0.5 text-sm">
                             <div class="absolute flex-shrink-0 flex items-center justify-center">
                               <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
@@ -38,11 +39,11 @@ export default function Experience() {
                       </div>
                       <div class="mt-2 text-white">
                         <p>
-                          - Added a user profile page for personalized settings.
+                          - Got interested toward cyber security and Hacking and all.
                           <br />
-                          - Implemented a dark mode for improved user experience at night.
+                          - Learn tools and techniques in kali Linux.
                           <br />
-                          - Introduced real-time notifications for instant updates.
+                          - Realized its not the actual thing I want to learn, so i quiet learning cyber security.
                         </p>
                       </div>
                     </div>
@@ -70,7 +71,7 @@ export default function Experience() {
                     <div class="min-w-0 flex-1 py-0">
                       <div class="text-md text-gray-500">
                         <div>
-                          <a href="#"
+                          <a
                             class="my-0.5 relative inline-flex items-center bg-white rounded-full border border-gray-300 px-3 py-0.5 text-sm">
                             <div class="absolute flex-shrink-0 flex items-center justify-center">
                               <span class="h-1.5 w-1.5 rounded-full bg-red-500" aria-hidden="true"></span>
@@ -82,11 +83,11 @@ export default function Experience() {
                       </div>
                       <div class="mt-2 text-white">
                         <p>
-                          - Resolved a critical issue causing crashes on certain devices.
+                          - Started learning core fundamentals of computer Science.
                           <br />
-                          - Fixed a login error that prevented some users from accessing their accounts.
+                          - Learned about differnt Tech stacks like <b className="font-bold text-blue-400" > Softwares, OS, Api's, Sockets, DBMS,</b> etc.
                           <br />
-                          - Addressed a display glitch causing text overflow in long messages.
+                          - Realized that Programming is EveryThing, and Committed to Become a <b className="font-extrabold text-red-500" >Elite Programmer </b>.
                         </p>
                       </div>
                     </div>
@@ -99,8 +100,8 @@ export default function Experience() {
         </div>
       </div>
     </div>
-    <div className="py-28">
-      <div class="bg-home" className="py-3 px-10">
+    <div className="py-32 text-lg font-normal">
+      <div class="bg-home" className=" px-10">
         <h1 className="text-white font-mono font-semibold">Experience</h1>
         <div class="max-w-xl mx-auto p-8">
           <div class="flow-root">
@@ -124,23 +125,23 @@ export default function Experience() {
                     <div class="min-w-0 flex-1 py-0">
                       <div class="text-md text-gray-500">
                         <div>
-                          <a href="#"
+                          <a
                             class="my-0.5 relative inline-flex items-center bg-white rounded-full border border-gray-300 px-3 py-0.5 text-sm">
                             <div class="absolute flex-shrink-0 flex items-center justify-center">
                               <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
                             </div>
-                            <div class="ml-3.5 font-medium text-gray-900">Feature</div>
+                            <div class="ml-3.5 font-medium text-gray-900">VerZeo</div>
                           </a>
-                          <p class="font-medium mr-2 py-2 text-white">2020-2021</p>
+                          <p class="font-medium mr-2 py-2 text-white">2022-2023 - Intern</p>
                         </div>
                       </div>
                       <div class="mt-2 text-white">
                         <p>
-                          - Added a user profile page for personalized settings.
+                          - Again Learned about cyber security from Industry Professionals.
                           <br />
-                          - Implemented a dark mode for improved user experience at night.
+                          - Implemented a project on Real world Secenario.
                           <br />
-                          - Introduced real-time notifications for instant updates.
+                          - Do a pentest on a Real website and Report bugs in that.
                         </p>
                       </div>
                     </div>
@@ -170,23 +171,23 @@ export default function Experience() {
                     <div class="min-w-0 flex-1 py-0">
                       <div class="text-md text-gray-500">
                         <div>
-                          <a href="#"
+                          <a
                             class="my-0.5 relative inline-flex items-center bg-white rounded-full border border-gray-300 px-3 py-0.5 text-sm">
                             <div class="absolute flex-shrink-0 flex items-center justify-center">
                               <span class="h-1.5 w-1.5 rounded-full bg-red-500" aria-hidden="true"></span>
                             </div>
-                            <div class="ml-3.5 font-medium text-gray-900">Bug</div>
+                            <div class="ml-3.5 font-medium text-gray-900">SNS - Ihub</div>
                           </a>
-                          <p class="font-medium mr-2 py-2 text-white">2020-2021</p>
+                          <p class="font-medium mr-2 py-2 text-white">2024 - Intern</p>
                         </div>
                       </div>
                       <div class="mt-2 text-white">
                         <p>
-                          - Resolved a critical issue causing crashes on certain devices.
+                          - Developed Backend for Multiple Projects using Python.
                           <br />
-                          - Fixed a login error that prevented some users from accessing their accounts.
+                          - Worked with data Handling and Engineering in Cloud.
                           <br />
-                          - Addressed a display glitch causing text overflow in long messages.
+                          - Design projects on various domains like <b className="font-bold text-blue-400">Civil, Mech, Aero</b>.
                         </p>
                       </div>
                     </div>

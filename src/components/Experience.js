@@ -2,8 +2,8 @@
 
 export default function Experience() {
   return <section className="flex flex-col md:flex-row bg-home justify-center py-16 ">
-    <div>
-      <div class="bg-home">
+    <div className="py-32">
+      <div class="bg-home px-10">
         <h1 className="text-white font-mono font-semibold"> Education</h1>
         <div class="max-w-xl mx-auto p-8">
           <div class="flow-root">
@@ -99,8 +99,8 @@ export default function Experience() {
         </div>
       </div>
     </div>
-    <div className="py-2">
-      <div class="bg-home" className="py-4">
+    <div className="py-28">
+      <div class="bg-home" className="py-3 px-10">
         <h1 className="text-white font-mono font-semibold">Experience</h1>
         <div class="max-w-xl mx-auto p-8">
           <div class="flow-root">

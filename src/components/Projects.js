@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
-import hero from '../assets/profile.jpg';
+import port1 from '../assets/port.png';
+import project1 from '../assets/project2.jpeg'
+import mac1 from '../assets/mac.jpg'
+import train1 from '../assets/train.jpeg'
 
 const Projects = () => {
     const content = [
-        { title: "Project 1", description: "Noteworthy technology acquisitions 2021", image: hero },
-        { title: "Project 2", description: "Biggest enterprise technology acquisitions", image: hero },
-        { title: "Project 3", description: "Technology acquisitions in 2021 so far", image: hero },
-        { title: "Project 4", description: "Technology acquisitions in 2021 so far", image: hero },
-        { title: "Project 5", description: "Technology acquisitions in 2021 so far", image: hero },
-        { title: "Project 6", description: "Technology acquisitions in 2021 so far", image: hero },
+        { title: "MAC-Changer", description: "Build a CLI-Linux tool used to change the MAC-Address of the System", image: mac1 },
+        { title: "DOS-Script", description: "Developed a python script that performs DOS attact on the target, by Multithreading concept", image: project1 },
+        { title: "Portfolio", description: "Developed a Portfoilio in react for Myself to showcase my skills in different tech aspects of technology and to give a quick intro about me and my projects.", image: port1 },
+        { title: "Train-Reservation-System", description: "Build a Train Reservation system in java, that works like a SAP application which has all of the functionalies like a actual system that is used.", image: train1 },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);

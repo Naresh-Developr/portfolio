@@ -1,6 +1,6 @@
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import { useState, useEffect } from 'react';
-import about from './Experience.js'
+
 
 export default function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -27,9 +27,7 @@ export default function Header() {
       <a className="font-mono font-semibold text-xl" href="#">
         Naresh::K &#62;
       </a>
-
   
-     
       <nav className="hidden md:block">
         <ul className="flex space-x-6 text-white">
           <li><a href="#about">About me</a></li>

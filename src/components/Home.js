@@ -22,7 +22,7 @@ export default function Home() {
                 </p>
 
                 <div className='flex'>
-                    <a href='#'>
+                    <a href='https://google.com'>
                     <svg
                         id="Layer_1"
                         data-name="Layer 1"
